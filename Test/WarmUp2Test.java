@@ -2,8 +2,6 @@ import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -36,10 +34,69 @@ public class WarmUp2Test {
                 new Object[]{"Hi",1,"Hi"},
                 new Object[]{"Hi",5,"HiHiHiHiHi"},
                 new Object[]{"Hi",0,""},
+                new Object[]{"Oh Boy!",2,"Oh Boy!Oh Boy!"},
+                new Object[]{"x",4,"xxxx"},
+                new Object[]{"",4,""},
+                new Object[]{"code",2,"codecode"},
+                new Object[]{"code",3,"codecodecode"}
+        };
+    }
+    @Test
+    @Parameters
+    /*Count XX: Count the number of "xx" in the given string. We'll say that
+    //overlapping is allowed, so "xxx" contains 2 "xx".*/
+    public void countXXTest(String str, int expresult){
+        //arrange
 
+        //act
+        int test = WarmUp2.countXX(str);
+
+        //assert
+        assertThat(test,equalTo(expresult));
+    }
+    private Object[] parametersForCountXXTest(){
+        return new Object[]{
+                new Object[]{"abcxx",1},
+                new Object[]{"xxx",2},
+                new Object[]{"xxxx",3},
+                new Object[]{"abc",0},
+                new Object[]{"Hello there",0},
+                new Object[]{"Hexxo thexxe",2},
+                new Object[]{"",0},
+                new Object[]{"Kittens",0},
+                new Object[]{"Kittensxxx",2},
 
         };
     }
+    @Test
+    @Parameters
+    //DoubleX: Given a string, return true if the first instance of "x" in the
+    //string is immediately followed by another "x".
+    public void doubleX(String str, boolean expresult){
+        //arrange
+
+        //act
+        boolean test = WarmUp2.doubleX(str);
+
+        //assert
+        assertThat(test,equalTo(expresult));
+    }
+    private Object[] parametersForDoubleX(){
+        return new Object[]{
+                new Object[]{"axxbb",true},
+                new Object[]{"axaxax",false},
+                new Object[]{"xxxxx",true},
+                new Object[]{"xaxxx",false},
+                new Object[]{"aaaax",false},
+                new Object[]{"",false},
+                new Object[]{"abc",false},
+                new Object[]{"x",false},
+                new Object[]{"xx",true},
+                new Object[]{"xax",false},
+                new Object[]{"xaxx",false},
+        };
+    }
+
 
 }
 
