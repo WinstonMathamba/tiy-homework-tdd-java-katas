@@ -9,6 +9,13 @@ public class Main{
         System.out.printf("Example of Count XX (abcxx) --> %s\n", WarmUp2.countXX("abcxx"));
         System.out.printf("Example of Double XX (axxbb) --> %s\n", WarmUp2.doubleX("axxbb"));
         System.out.printf("Example of String Bits (Hello) --> %s\n", WarmUp2.stringBits("Hello"));
+        System.out.printf("Example of StringSpolosion (Code) --> %s\n", WarmUp2.stringSplosion("Code"));
+        System.out.printf("Example of Last 2 (hixxxhi) --> %s\n", WarmUp2.last2("hixxxhi"));
+        int[] nines = {1,2,9};
+        System.out.printf("Example of Array Count 9s [1, 2, 9] --> %s\n", WarmUp2.arrayCount9(nines));
+
+
+
 
     }
 
