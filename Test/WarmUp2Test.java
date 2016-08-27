@@ -72,7 +72,7 @@ public class WarmUp2Test {
     @Parameters
     //DoubleX: Given a string, return true if the first instance of "x" in the
     //string is immediately followed by another "x".
-    public void doubleX(String str, boolean expresult){
+    public void doubleXTest(String str, boolean expresult){
         //arrange
 
         //act
@@ -81,7 +81,7 @@ public class WarmUp2Test {
         //assert
         assertThat(test,equalTo(expresult));
     }
-    private Object[] parametersForDoubleX(){
+    private Object[] parametersForDoubleXTest(){
         return new Object[]{
                 new Object[]{"axxbb",true},
                 new Object[]{"axaxax",false},
@@ -97,6 +97,33 @@ public class WarmUp2Test {
         };
     }
 
+    @Test
+    @Parameters
+    //String Bits: Given a string, return a new string made of every other
+    //char starting with the first, so "Hello" yields "Hlo".
+    public void stringBitsTest(String str, String expresult){
+        //arrange
+
+        //act
+        String test = WarmUp2.stringBits(str);
+
+        //assert
+        assertThat(test, equalTo(expresult));
+    }
+    private Object[] parametersForStringBitsTest(){
+        return new Object[]{
+                new Object[]{"Hello","Hlo"},
+                new Object[]{"Hi","H"},
+                new Object[]{"Heeololeo","Hello"},
+                new Object[]{"HiHiHi","HHH"},
+                new Object[]{"",""},
+                new Object[]{"Greetings","Getns"},
+                new Object[]{"Chocoate","Coot"},
+                new Object[]{"pi","p"},
+                new Object[]{"Hello Kitten","HloKte"},
+                new Object[]{"hxaxpxpxy","happy"},
+        };
+    }
 
 }
 
