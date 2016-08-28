@@ -182,23 +182,62 @@ public class WarmUp2Test {
                 new Object[]{"",0},
         };
     }
-
     @Test
     @Parameters
-    //Array Count 9: Given an array of ints, return the number of 9's in the array.
-    public void arrayCount9Test(int[] nines, int expresult){
+    //String Match: Given 2 strings, a and b, return the number of the positions where they contain the same
+    //length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings
+    //appear in the same place in both strings.
+    public void stringMatchTest(String a, String b, int expresult){
         //arrange
 
         //act
-        int test = WarmUp2.arrayCount9(nines);
+        int test = WarmUp2.stringMatch(a,b);
 
         //assert
-        assertThat(test, equalTo(expresult));
+        assertThat(test,equalTo(expresult));
     }
-    private Object[] parametersForArrayCount9(){
+    private Object[] parametersForStringMatchTest(){
         return new Object[]{
-                new Object[]{,1},
+                new Object[]{"xxcaazz","xxbaaz",3},
+                new Object[]{"abc","abc",2},
+                new Object[]{"abc","axc",0},
+                new Object[]{"hello","he",1},
+                new Object[]{"he","hello",1},
+                new Object[]{"h","hello",0},
+                new Object[]{"","hello",0},
+                new Object[]{"aabbccdd","abbbxxd",1},
+                new Object[]{"aaxxaaxx","iaxxai",3},
+                new Object[]{"iaxxai","aaxxaaxx",3},
         };
     }
+
+    @Test
+    @Parameters
+    //String X: Given a string, return a version where all the "x" have been removed. Except an "x"
+    //at the very start or end should not be removed.
+    public void stringXTest(String str,String expresult){
+        //act
+
+        //arrange
+        String test = WarmUp2.stringX(str);
+
+        //assert
+        assertThat(test,equalTo(expresult));
+    }
+    private Object[] parametersForStringXTest(){
+        return new Object[]{
+                new Object[]{"xxHxix","xHix"},
+                new Object[]{"abxxxcd","abcd"},
+                new Object[]{"xabxxxcdx","xabcdx"},
+                new Object[]{"xKittenx","xKittenx"},
+                new Object[]{"Hello","Hello"},
+                new Object[]{"xx","xx"},
+                new Object[]{"x","x"},
+                new Object[]{"",""},
+
+
+        };
+    }
+
 }
 

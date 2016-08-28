@@ -81,4 +81,36 @@ public class WarmUp2 {
         }
         return count;
     }
+
+    //arrayFront9
+    //array123
+
+    //String Match: Given 2 strings, a and b, return the number of the positions where they contain the same
+    //length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings
+    //appear in the same place in both strings.
+    public static int stringMatch(String a, String b){
+        int len = Math.min(a.length(), b.length());
+        int count = 0;
+        for (int i=0; i<len-1; i++) {
+            String aSub = a.substring(i, i+2);
+            String bSub = b.substring(i, i+2);
+            if (aSub.equals(bSub)) {
+               count++;
+            }
+        }
+
+        return count;
+    }
+    //String X: Given a string, return a version where all the "x" have been removed. Except an "x"
+    //at the very start or end should not be removed.
+    public static String stringX(String str){
+        String result = "";
+        for (int i=0; i<str.length(); i++) {
+            if (!(i > 0 && i < (str.length()-1) && str.substring(i, i+1).equals("x"))) {
+                result = result + str.substring(i, i+1);
+            }
+        }
+        return result;
+    }
 }
+
