@@ -15,6 +15,7 @@ public class Main{
         System.out.printf("Example of Array Count 9s [1, 2, 9] --> %s\n", WarmUp2.arrayCount9(nines));
         System.out.printf("Example of String Match (xxcaazz) --> %s\n",WarmUp2.stringMatch("xxcaazz","xxbaaz"));
         System.out.printf("Example of String X (xxHxix) --> %s\n", WarmUp2.stringX("xxHxix"));
+        System.out.printf("Example of Alt Pairs (kitten) --> %s\n", WarmUp2.altPairs("kitten"));
 
     }
 

@@ -3,6 +3,7 @@ import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.omg.CORBA.OBJ_ADAPTER;
+import org.omg.CORBA.ORBPackage.InconsistentTypeCode;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -234,10 +235,878 @@ public class WarmUp2Test {
                 new Object[]{"xx","xx"},
                 new Object[]{"x","x"},
                 new Object[]{"",""},
-
-
         };
     }
 
+    @Test
+    @Parameters
+    //Alt Pairs: Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ...
+    //so "kittens" yields "kien".
+    public void altPairsTest(String str, String expresult){
+        //act
+
+        //arrange
+        String test = WarmUp2.altPairs(str);
+
+        //assert
+        assertThat(test,equalTo(expresult));
+    }
+    private Object[] parametersForAltPairsTest(){
+        return new Object[]{
+                new Object[]{"kitten","kien"},
+                new Object[]{"Chocolate","Chole"},
+                new Object[]{"CodingHorror","Congrr"},
+                new Object[]{"yak","ya"},
+                new Object[]{"ya","ya"},
+                new Object[]{"y","y"},
+                new Object[]{"",""},
+                new Object[]{"ThisThatTheOther","ThThThth"},
+        };
+    }
+
+    @Test
+    @Parameters
+    //String Yak: Suppose the string "yak" is unlucky. Given a string, return a version where
+    //all the "yak" are removed, but the "a" can be any char. The "yak" strings will not overlap.
+    public void stringYakTest(String str, String expresult) {
+        //act
+
+        //arrange
+        String test = WarmUp2.stringYak(str);
+
+        //assert
+        assertThat(test,equalTo(expresult));
+    }
+    private Object[] parametersForStringYakTest(){
+        return new Object[]{
+                new Object[]{"yakpak","pak"},
+                new Object[]{"pakyak","pak"},
+                new Object[]{"yak123ya","123ya"},
+                new Object[]{"yak",""},
+                new Object[]{"yakxxxyak","xxx"},
+                new Object[]{"HiyakHi","HiHi"},
+                new Object[]{"xxxyakyyyakzzz","xxxyyzzz"},
+        };
+    }
+    @Test
+    //Array Count 9: Given an array of ints, return the number of 9's in the array.
+    public void arrayCount9Test(){
+        //act
+        int[] nines = {1,2,9};
+
+        //arrange
+        Integer test = WarmUp2.arrayCount9(nines);
+
+        //assert
+        assertThat(test,equalTo(1));
+    }
+    @Test
+    //Array Count 9: Given an array of ints, return the number of 9's in the array.
+    public void arrayCount9Test1(){
+        //act
+        int[] nines = {1,9,9};
+
+        //arrange
+        Integer test = WarmUp2.arrayCount9(nines);
+
+        //assert
+        assertThat(test,equalTo(2));
+
+    }
+    @Test
+    //Array Count 9: Given an array of ints, return the number of 9's in the array.
+    public void arrayCount9Test2(){
+        //act
+        int[] nines = {1,9,9,3,9};
+
+        //arrange
+        Integer test = WarmUp2.arrayCount9(nines);
+
+        //assert
+        assertThat(test,equalTo(3));
+
+    }
+    @Test
+    //Array Count 9: Given an array of ints, return the number of 9's in the array.
+    public void arrayCount9Test3(){
+        //act
+        int[] nines = {1,2,3};
+
+        //arrange
+        Integer test = WarmUp2.arrayCount9(nines);
+
+        //assert
+        assertThat(test,equalTo(0));
+    }
+    @Test
+    //Array Count 9: Given an array of ints, return the number of 9's in the array.
+    public void arrayCount9Test4(){
+        //act
+        int[] nines = {};
+
+        //arrange
+        Integer test = WarmUp2.arrayCount9(nines);
+
+        //assert
+        assertThat(test,equalTo(0));
+    }
+    @Test
+    //Array Count 9: Given an array of ints, return the number of 9's in the array.
+    public void arrayCount9Test5(){
+        //act
+        int[] nines = {4,2,4,3,1};
+
+        //arrange
+        Integer test = WarmUp2.arrayCount9(nines);
+
+        //assert
+        assertThat(test,equalTo(0));
+    }
+    @Test
+    //Array Count 9: Given an array of ints, return the number of 9's in the array.
+    public void arrayCount9Test6(){
+        //act
+        int[] nines = {9,2,4,3,1};
+
+        //arrange
+        Integer test = WarmUp2.arrayCount9(nines);
+
+        //assert
+        assertThat(test,equalTo(1));
+    }
+
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test(){
+        //arrange
+        int[] num = {1,2,9,3,4};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test1(){
+        //arrange
+        int[] num = {1,2,3,4,9};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(false));
+    }
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test2(){
+        //arrange
+        int[] num = {1,2,3,4,5};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(false));
+    }
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test3(){
+        //arrange
+        int[] num = {9,2,3};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test4(){
+        //arrange
+        int[] num = {1,9,9};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test5(){
+        //arrange
+        int[] num = {1,2,3};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(false));
+    }
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test6(){
+        //arrange
+        int[] num = {1,9};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test7(){
+        //arrange
+        int[] num = {5,5};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(false));
+    }
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test8(){
+        //arrange
+        int[] num = {2};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(false));
+    }
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test9(){
+        //arrange
+        int[] num = {9};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test10(){
+        //arrange
+        int[] num = {};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(false));
+    }
+    @Test
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public void arrayFront9Test11(){
+        //arrange
+        int[] num = {3,9,2,3,3};
+
+        //act
+        boolean test = WarmUp2.arrayFront9(num);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //Array123: Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
+    public void array123Test(){
+        //arrange
+        int[] nums = {1,1,2,3,1};
+
+        //act
+        boolean test = WarmUp2.array123(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Array123: Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
+    public void array123Test1(){
+        //arrange
+        int[] nums = {1,1,2,4,1};
+
+        //act
+        boolean test = WarmUp2.array123(nums);
+
+        //assert
+        assertThat(test,equalTo(false));
+    }
+    @Test
+    //Array123: Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
+    public void array123Test2(){
+        //arrange
+        int[] nums = {1,2,1,2,3};
+
+        //act
+        boolean test = WarmUp2.array123(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Array123: Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
+    public void array123Test3(){
+        //arrange
+        int[] nums = {1,1,2,1,2,1};
+
+        //act
+        boolean test = WarmUp2.array123(nums);
+
+        //assert
+        assertThat(test,equalTo(false));
+    }
+    @Test
+    //Array123: Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
+    public void array123Test4(){
+        //arrange
+        int[] nums = {1,2,3,1,2,3};
+
+        //act
+        boolean test = WarmUp2.array123(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Array123: Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
+    public void array123Test5(){
+        //arrange
+        int[] nums = {1,2,3};
+
+        //act
+        boolean test = WarmUp2.array123(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Array123: Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
+    public void array123Test6(){
+        //arrange
+        int[] nums = {1,1,1};
+
+        //act
+        boolean test = WarmUp2.array123(nums);
+
+        //assert
+        assertThat(test,equalTo(false));
+    }
+    @Test
+    //Array123: Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
+    public void array123Test7(){
+        //arrange
+        int[] nums = {1,2};
+
+        //act
+        boolean test = WarmUp2.array123(nums);
+
+        //assert
+        assertThat(test,equalTo(false));
+    }
+    @Test
+    //Array123: Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
+    public void array123Test8(){
+        //arrange
+        int[] nums = {};
+
+        //act
+        boolean test = WarmUp2.array123(nums);
+
+        //assert
+        assertThat(test,equalTo(false));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test(){
+        //arrange
+        int[] nums = {6,6,2};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(1));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test1(){
+        //arrange
+        int[] nums = {6,6,2,6};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(1));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test2(){
+        //arrange
+        int[] nums = {6,7,2,6};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(1));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test3(){
+        //arrange
+        int[] nums = {6,6,2,6,7};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(2));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test4(){
+        //arrange
+        int[] nums = {1,6,3};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(0));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test5(){
+        //arrange
+        int[] nums = {6,1};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(0));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test6(){
+        //arrange
+        int[] nums = {};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(0));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test7(){
+        //arrange
+        int[] nums = {3,6,7,6};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(1));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test8(){
+        //arrange
+        int[] nums = {3,6,6,7};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(2));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test9(){
+        //arrange
+        int[] nums = {6,3,6,6};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(1));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test10(){
+        //arrange
+        int[] nums = {6,7,6,6};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(2));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test11(){
+        //arrange
+        int[] nums = {1,2,3,5,6};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(0));
+    }
+    @Test
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public void array667Test12(){
+        //arrange
+        int[] nums = {1,2,3,6,6};
+
+        //act
+        Integer test = WarmUp2.array667(nums);
+
+        //assert
+        assertThat(test,equalTo(1));
+    }
+
+    @Test
+    //No Triples: Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+    //Return true if the array does not contain any triples.
+    public void noTriplesTest(){
+        //arrange
+        int[] nums = {1,1,2,2,1};
+
+        //act
+        boolean test = WarmUp2.noTriples(nums);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //No Triples: Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+    //Return true if the array does not contain any triples.
+    public void noTriplesTest1(){
+        //arrange
+        int[] nums = {1,1,2,2,2,1};
+
+        //act
+        boolean test = WarmUp2.noTriples(nums);
+
+        //assert
+        assertThat(test, equalTo(false));
+    }
+    @Test
+    //No Triples: Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+    //Return true if the array does not contain any triples.
+    public void noTriplesTest2(){
+        //arrange
+        int[] nums = {1,1,1,2,2,2,1};
+
+        //act
+        boolean test = WarmUp2.noTriples(nums);
+
+        //assert
+        assertThat(test, equalTo(false));
+    }
+    @Test
+    //No Triples: Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+    //Return true if the array does not contain any triples.
+    public void noTriplesTest3(){
+        //arrange
+        int[] nums = {1,1,2,2,1,2};
+
+        //act
+        boolean test = WarmUp2.noTriples(nums);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //No Triples: Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+    //Return true if the array does not contain any triples.
+    public void noTriplesTest4(){
+        //arrange
+        int[] nums = {1,2,1};
+
+        //act
+        boolean test = WarmUp2.noTriples(nums);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //No Triples: Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+    //Return true if the array does not contain any triples.
+    public void noTriplesTest5(){
+        //arrange
+        int[] nums = {1,1,1};
+
+        //act
+        boolean test = WarmUp2.noTriples(nums);
+
+        //assert
+        assertThat(test, equalTo(false));
+    }
+    @Test
+    //No Triples: Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+    //Return true if the array does not contain any triples.
+    public void noTriplesTest6(){
+        //arrange
+        int[] nums = {1,1,};
+
+        //act
+        boolean test = WarmUp2.noTriples(nums);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //No Triples: Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+    //Return true if the array does not contain any triples.
+    public void noTriplesTest7(){
+        //arrange
+        int[] nums = {1};
+
+        //act
+        boolean test = WarmUp2.noTriples(nums);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //No Triples: Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+    //Return true if the array does not contain any triples.
+    public void noTriplesTest8(){
+        //arrange
+        int[] nums = {};
+
+        //act
+        boolean test = WarmUp2.noTriples(nums);
+
+        //assert
+        assertThat(test, equalTo(true));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test(){
+        //arrange
+        int[] nums = {1,2,7,1};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test1(){
+        //arrange
+        int[] nums = {1,2,8,1};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(false));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test2(){
+        //arrange
+        int[] nums = {2,7,1};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test3(){
+        //arrange
+        int[] nums = {3,8,2};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test4(){
+        //arrange
+        int[] nums = {2,7,3};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test5(){
+        //arrange
+        int[] nums = {2,7,4};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(false));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test6(){
+        //arrange
+        int[] nums = {2,7,-1};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test7(){
+        //arrange
+        int[] nums = {2,7,-2};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(false));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test8(){
+        //arrange
+        int[] nums = {4,5,3,8,0};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test9(){
+        //arrange
+        int[] nums = {2,7,5,10,4};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test10(){
+        //arrange
+        int[] nums = {2,7,-2,4,9,3};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(true));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test11(){
+        //arrange
+        int[] nums = {2,7,5,10,1};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(false));
+    }
+    @Test
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public void has271Test12(){
+        //arrange
+        int[] nums = {2,7,-2,4,10,2};
+
+        //act
+        boolean test = WarmUp2.has271(nums);
+
+        //assert
+        assertThat(test,equalTo(false));
+    }
 }
 

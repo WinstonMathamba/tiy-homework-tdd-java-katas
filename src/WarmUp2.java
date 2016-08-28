@@ -82,8 +82,24 @@ public class WarmUp2 {
         return count;
     }
 
-    //arrayFront9
-    //array123
+    //Array Front 9: Given an array of ints, return true if one of the first 4 elements in the array
+    //is a 9. The array length may be less than 4.
+    public static boolean arrayFront9(int[] num) {
+        int end = num.length;
+        if (end > 4) end = 4;
+        for (int i=0; i<end; i++) {
+            if (num[i] == 9) return true;
+        }
+        return false;
+    }
+
+    //Array123: Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
+    public static boolean array123(int[] nums) {
+        for (int i=0; i < (nums.length-2); i++) {
+            if (nums[i]==1 && nums[i+1]==2 && nums[i+2]==3) return true;
+        }
+        return false;
+    }
 
     //String Match: Given 2 strings, a and b, return the number of the positions where they contain the same
     //length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings
@@ -101,6 +117,7 @@ public class WarmUp2 {
 
         return count;
     }
+
     //String X: Given a string, return a version where all the "x" have been removed. Except an "x"
     //at the very start or end should not be removed.
     public static String stringX(String str){
@@ -112,5 +129,70 @@ public class WarmUp2 {
         }
         return result;
     }
+
+    //Alt Pairs: Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ...
+    //so "kittens" yields "kien".
+    public static String altPairs(String str) {
+        String result = "";
+        for (int i=0; i<str.length(); i += 4) {
+            int end = i + 2;
+            if (end > str.length()) {
+                end = str.length();
+            }
+            result = result + str.substring(i, end);
+        }
+
+        return result;
+    }
+
+    //String Yak: Suppose the string "yak" is unlucky. Given a string, return a version where
+    //all the "yak" are removed, but the "a" can be any char. The "yak" strings will not overlap.
+    public static String stringYak(String str) {
+        String result = "";
+        for (int i=0; i<str.length(); i++) {
+            if (i+2<str.length() && str.charAt(i)=='y' && str.charAt(i+2)=='k') {
+                i =  i + 2;
+            } else {
+                result = result + str.charAt(i);
+            }
+        }
+        return result;
+    }
+    //Array 667: Given an array of ints, return the number of times that two 6's are next to each
+    // other in the array. Also count instances where the second "6" is actually a 7.
+    public static int array667(int[] nums) {
+        int count = 0;
+        for (int i=0; i < (nums.length-1); i++) {
+            if (nums[i] == 6) {
+                if (nums[i+1] == 6 || nums[i+1] == 7) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+    //No Triples: Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array.
+    //Return true if the array does not contain any triples.
+    public static boolean noTriples(int[] nums) {
+        for (int i=0; i < (nums.length-2); i++) {
+            int first = nums[i];
+            if (nums[i+1]==first && nums[i+2]==first) return false;
+        }
+        return true;
+    }
+
+    //Has 271: Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+    //followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts
+    //even if the "1" differs by 2 or less from the correct value.
+    public static boolean has271(int[] nums) {
+        for (int i=0; i < (nums.length-2); i++) {
+            int val = nums[i];
+            if (nums[i+1] == (val + 5) &&
+                    Math.abs(nums[i+2] - (val-1)) <= 2)  return true;
+        }
+
+        return false;
+    }
+
 }
 

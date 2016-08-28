@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3d99b54-06e0-473e-82d0-48b0adf4752f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/WarmUp2Test.java" afterPath="$PROJECT_DIR$/Test/WarmUp2Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WarmUp2.java" afterPath="$PROJECT_DIR$/src/WarmUp2.java" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="WarmUp2Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/WarmUp2Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="235" column="33" selection-start-line="235" selection-start-column="33" selection-end-line="235" selection-end-column="33" />
+            <state relative-caret-position="16230">
+              <caret line="1090" column="13" selection-start-line="1090" selection-start-column="13" selection-end-line="1090" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -40,8 +39,8 @@
       <file leaf-file-name="WarmUp2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WarmUp2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="104" selection-end-column="53" />
+            <state relative-caret-position="208">
+              <caret line="186" column="18" selection-start-line="186" selection-start-column="18" selection-end-line="186" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -50,8 +49,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="94" selection-start-line="16" selection-start-column="94" selection-end-line="16" selection-end-column="94" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,8 +78,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/Kata.java" />
         <option value="$PROJECT_DIR$/Test/KataTest.java" />
-        <option value="$PROJECT_DIR$/src/WarmUp2.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/WarmUp2.java" />
         <option value="$PROJECT_DIR$/Test/WarmUp2Test.java" />
       </list>
     </option>
@@ -99,9 +98,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="597" />
-    <option name="width" value="843" />
-    <option name="height" value="900" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -139,53 +138,16 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.25862068" />
-    <property name="FullScreen" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.WarmUp2Test">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="tiy-homework-tdd-java-katas" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="WarmUp2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.WarmUp2Test.has271Test12">
+    <configuration default="false" name="WarmUp2Test.has271Test8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="tiy-homework-tdd-java-katas" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WarmUp2Test" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="WarmUp2Test.last2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="tiy-homework-tdd-java-katas" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="WarmUp2Test" />
-      <option name="METHOD_NAME" value="last2Test" />
+      <option name="METHOD_NAME" value="has271Test8" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -199,14 +161,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="WarmUp2Test.stringMatchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="WarmUp2Test.has271Test9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="tiy-homework-tdd-java-katas" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WarmUp2Test" />
-      <option name="METHOD_NAME" value="stringMatchTest" />
+      <option name="METHOD_NAME" value="has271Test9" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -220,14 +182,56 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="WarmUp2Test.stringXTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="WarmUp2Test.has271Test10" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="tiy-homework-tdd-java-katas" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WarmUp2Test" />
-      <option name="METHOD_NAME" value="stringXTest" />
+      <option name="METHOD_NAME" value="has271Test10" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="WarmUp2Test.has271Test11" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="tiy-homework-tdd-java-katas" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WarmUp2Test" />
+      <option name="METHOD_NAME" value="has271Test11" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="WarmUp2Test.has271Test12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="tiy-homework-tdd-java-katas" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WarmUp2Test" />
+      <option name="METHOD_NAME" value="has271Test12" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -681,19 +685,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.WarmUp2Test" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.last2Test" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.stringMatchTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.stringXTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.has271Test8" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.has271Test9" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.has271Test10" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.has271Test11" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.has271Test12" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.WarmUp2Test" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.stringXTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.stringMatchTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.last2Test" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.has271Test12" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.has271Test11" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.has271Test10" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.has271Test9" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.WarmUp2Test.has271Test8" />
       </list>
     </recent_temporary>
   </component>
@@ -713,48 +717,48 @@
       <workItem from="1472225603152" duration="11854000" />
       <workItem from="1472257661547" duration="7890000" />
       <workItem from="1472341688196" duration="69000" />
-      <workItem from="1472341812665" duration="1870000" />
+      <workItem from="1472341812665" duration="8903000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WarmUp2Test - 2016.08.27 at 20h 31m 02s.xml">
-      <configuration name="WarmUp2Test" configurationId="JUnit" />
+    <history-entry file="WarmUp2Test_has271Test10 - 2016.08.28 at 10h 31m 42s.xml">
+      <configuration name="WarmUp2Test.has271Test10" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WarmUp2Test_stringMatchTest - 2016.08.27 at 20h 01m 53s.xml">
-      <configuration name="WarmUp2Test.stringMatchTest" configurationId="JUnit" />
+    <history-entry file="WarmUp2Test_has271Test11 - 2016.08.28 at 10h 32m 14s.xml">
+      <configuration name="WarmUp2Test.has271Test11" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WarmUp2Test_stringMatchTest - 2016.08.27 at 20h 02m 18s.xml">
-      <configuration name="WarmUp2Test.stringMatchTest" configurationId="JUnit" />
+    <history-entry file="WarmUp2Test_has271Test12 - 2016.08.28 at 10h 32m 41s.xml">
+      <configuration name="WarmUp2Test.has271Test12" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WarmUp2Test_stringMatchTest - 2016.08.27 at 20h 02m 39s.xml">
-      <configuration name="WarmUp2Test.stringMatchTest" configurationId="JUnit" />
+    <history-entry file="WarmUp2Test_has271Test4 - 2016.08.28 at 10h 28m 01s.xml">
+      <configuration name="WarmUp2Test.has271Test4" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WarmUp2Test_stringXTest - 2016.08.27 at 20h 28m 31s.xml">
-      <configuration name="WarmUp2Test.stringXTest" configurationId="JUnit" />
+    <history-entry file="WarmUp2Test_has271Test5 - 2016.08.28 at 10h 28m 29s.xml">
+      <configuration name="WarmUp2Test.has271Test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WarmUp2Test_stringXTest - 2016.08.27 at 20h 28m 59s.xml">
-      <configuration name="WarmUp2Test.stringXTest" configurationId="JUnit" />
+    <history-entry file="WarmUp2Test_has271Test6 - 2016.08.28 at 10h 29m 14s.xml">
+      <configuration name="WarmUp2Test.has271Test6" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WarmUp2Test_stringXTest - 2016.08.27 at 20h 29m 38s.xml">
-      <configuration name="WarmUp2Test.stringXTest" configurationId="JUnit" />
+    <history-entry file="WarmUp2Test_has271Test7 - 2016.08.28 at 10h 29m 42s.xml">
+      <configuration name="WarmUp2Test.has271Test7" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WarmUp2Test_stringXTest - 2016.08.27 at 20h 30m 10s.xml">
-      <configuration name="WarmUp2Test.stringXTest" configurationId="JUnit" />
+    <history-entry file="WarmUp2Test_has271Test8 - 2016.08.28 at 10h 30m 10s.xml">
+      <configuration name="WarmUp2Test.has271Test8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WarmUp2Test_stringXTest - 2016.08.27 at 20h 30m 28s.xml">
-      <configuration name="WarmUp2Test.stringXTest" configurationId="JUnit" />
+    <history-entry file="WarmUp2Test_has271Test9 - 2016.08.28 at 10h 30m 45s.xml">
+      <configuration name="WarmUp2Test.has271Test9" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WarmUp2Test_stringXTest - 2016.08.27 at 20h 30m 56s.xml">
-      <configuration name="WarmUp2Test.stringXTest" configurationId="JUnit" />
+    <history-entry file="WarmUp2Test_has271Test9 - 2016.08.28 at 10h 31m 12s.xml">
+      <configuration name="WarmUp2Test.has271Test9" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21683000" />
+    <option name="totallyTimeSpent" value="28716000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="597" y="0" width="843" height="900" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -765,7 +769,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.49188516" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34955186" sideWeight="0.49188516" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -798,7 +802,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -888,24 +892,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="94" selection-start-line="16" selection-start-column="94" selection-end-line="16" selection-end-column="94" />
+        <state relative-caret-position="270">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WarmUp2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="104" selection-end-column="53" />
+        <state relative-caret-position="208">
+          <caret line="186" column="18" selection-start-line="186" selection-start-column="18" selection-end-line="186" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/WarmUp2Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="235" column="33" selection-start-line="235" selection-start-column="33" selection-end-line="235" selection-end-column="33" />
+        <state relative-caret-position="16230">
+          <caret line="1090" column="13" selection-start-line="1090" selection-start-column="13" selection-end-line="1090" selection-end-column="13" />
           <folding />
         </state>
       </provider>
