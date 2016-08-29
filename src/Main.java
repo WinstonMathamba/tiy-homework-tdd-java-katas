@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /**
  * Created by win808mac on 8/26/16.
  */
@@ -17,6 +19,47 @@ public class Main{
         System.out.printf("Example of String X (xxHxix) --> %s\n", WarmUp2.stringX("xxHxix"));
         System.out.printf("Example of Alt Pairs (kitten) --> %s\n", WarmUp2.altPairs("kitten"));
 
+        HashMap<String, String> map = new HashMap<>();
+        map.put("b", "dirt");
+        map.put("a", "candy");
+        System.out.printf("Example of Map1.mapBully(%s) -> ", map);
+        System.out.printf("%s\n", Map1.mapBully(map));
+
+        HashMap<String, String> map1 = new HashMap<>();
+        map1.put("a", "aaa");
+        map1.put("b", "bbb");
+        map1.put("c", "ccc");
+        System.out.printf("Example of Map1.mapShare(%s) -> ", map1);
+        System.out.printf("%s\n", Map1.mapShare(map1));
+
+        HashMap<String, String> datas = new HashMap<>();
+        datas.put("a", "Hi");
+        datas.put("b", "there");
+        System.out.printf("Example of Map1 .mapAB(%s) -> ", datas);
+        datas = Map1.mapAB(datas);
+        System.out.printf("%s\n", datas);
+
+        HashMap<String, String> map2 = new HashMap<>();
+        map2.put("ice cream", "peanuts");
+        map2.put("bread", "butter");
+        System.out.printf("Example of Map1.topping1(%s) -> ", map2);
+        System.out.printf("%s\n", Map1.topping1(map2));
+
+        HashMap<String, String> map3 = new HashMap<>();
+        map3.put("ice cream", "peanuts");
+        map3.put("bread", "butter");
+        System.out.printf("Example of Map1.topping2(%s) -> ", map3);
+        System.out.printf("%s\n", Map1.topping2(map3));
+
+        HashMap<String, String> map4 = new HashMap<>();
+        map4.put("potato", "ketchup");
+        map4.put("potato", "butter");
+        System.out.printf("Example of Map1.topping3(%s) -> ", map4);
+        System.out.printf("%s\n", Map1.topping3(map4));
+
     }
 
+
 }
+
+
